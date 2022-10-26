@@ -1,0 +1,33 @@
+### display all products
+GET http://localhost:8080/getProducts
+Content-Type: application/json
+
+### add a product to the product list
+POST http://localhost:8080/add
+Content-Type: application/json
+
+{
+  "product_name": "shoe",
+  "display_name": "shoe",
+  "price": 15,
+  "sale_percent": 5,
+  "on_sale": false
+}
+
+### put UUID into url from product
+DELETE http://localhost:8080/remove/c74d5933-b2b3-466b-a58f-d73507a8099c
+
+### put UUID into url from product
+PUT http://localhost:8080/replace/6b369f62-ff78-49fe-a8c0-8f3d9f508989
+Content-Type: application/json
+
+{
+  "product_name": "shoe",
+  "display_name": "shoe",
+  "price": 70,
+  "sale_percent": 5,
+  "on_sale": false
+}
+
+### Filters product list to display products that cost more then parameter
+GET http://localhost:8080/filteredList/22
